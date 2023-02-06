@@ -1,3 +1,3 @@
 class Book < ApplicationRecord
-    params.require(:book).permit(:title, :number_of_pages, :image)
+    has_many :book_review, -> {order "created_at DESC"}
 end
